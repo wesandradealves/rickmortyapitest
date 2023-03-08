@@ -1,0 +1,14 @@
+.profile-card {
+    border: 2px whitesmoke solid;
+    max-width: 414px;
+    border-radius: 15px;
+    .q-tree__avatar,
+    .q-avatar img:not(.q-icon):not(.q-img__image)  {
+        width: auto;
+        height: auto;
+    }
+    .q-tabs__content {
+        padding: 0;
+        margin: 0;
+    }
+}

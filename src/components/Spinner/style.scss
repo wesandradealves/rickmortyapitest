@@ -1,0 +1,10 @@
+.q-spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    svg {
+        height: 30px;
+    }
+    z-index: 99;
+}

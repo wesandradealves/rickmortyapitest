@@ -1,0 +1,18 @@
+.list-group-item {
+    .q-avatar__content {
+        margin: 0 !important;
+    }    
+    .q-item__section {
+        a {
+            text-decoration: initial;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+
+.q-pagination__content {
+    > button {
+        display: none;
+    }
+}

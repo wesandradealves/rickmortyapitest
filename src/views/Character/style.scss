@@ -1,0 +1,11 @@
+.list-group-item {
+    .q-avatar__content {
+        margin: 0 !important;
+    }    
+}
+
+.q-pagination__content {
+    > button {
+        display: none;
+    }
+}
