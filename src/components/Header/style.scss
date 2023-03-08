@@ -1,0 +1,47 @@
+.q-toolbar {
+    .q-ripple,
+    .q-focus-helper {
+        display: none !important;
+    }    
+    .q-field__control {
+        display: flex;
+    }
+    .q-field__control-container {
+        flex: 1;
+    }
+    .q-field__append {
+        width: auto;
+    }
+    .q-field--float .q-field__label {
+        color: black;
+    }
+    .q-field--standout.q-field--highlighted .q-field__control {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    // .q-field__control:before, .q-field__control:after,
+    // .q-field--standout .q-field__control:before {
+    //     opacity: 0 !important;
+    // }
+    .input {
+        background-color: rgba(0,0,0,.1);
+        border: 0;
+        border-radius: 99px;
+        box-shadow: none;
+        outline: none;
+        color: white !important;     
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white !important;
+        opacity: 1 !important; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: white !important;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: white !important;
+    }       
+}
+
