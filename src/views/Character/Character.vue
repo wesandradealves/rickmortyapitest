@@ -67,6 +67,9 @@ export default {
             }).then((res) => res.json())
             
             if(response.data) {
+              delete response.data.character.location.id;
+              let date = new Date(response.data.character.location.created);
+              response.data.character.location.created = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
               object.value = response.data.character
               document.title = `${document.title} - ${object.value.name}`;
             }
