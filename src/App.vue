@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import Spinner from '@/components/Spinner/Spinner.vue'
 import Header from '@/components/Header/Header.vue'
@@ -25,9 +26,12 @@ export default {
     },     
     setup () {
       const store = useStore()
+      const route = useRoute()
+      const router = useRouter()
       const s = ref(0);
 
       function handleChange(e) {
+        if(route.path.indexOf('character')) router.push('/')
         if(e) {
           store.dispatch('CharactersByName', e)
           s.value = e
@@ -39,7 +43,7 @@ export default {
       }      
 
       store.dispatch('Characters')
-      return { handleChange, s };
+      return { handleChange, s, router };
     } 
   }
 </script>
