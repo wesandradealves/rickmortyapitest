@@ -43,6 +43,12 @@ export default {
                         gender
                         id
                         image
+                        episode {
+                          name,
+                          id,
+                          air_date,
+                          episode
+                        }                        
                         location {
                           created
                           dimension

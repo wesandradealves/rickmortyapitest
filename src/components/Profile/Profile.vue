@@ -20,6 +20,7 @@
             >
                 <q-tab class="col-4 p-0 m-0" name="mails" label="Location" />
                 <q-tab class="col-4 p-0 m-0" name="alarms" label="Other" />
+                <q-tab class="col-4 p-0 m-0" name="episodes" label="Episodes" />
             </q-tabs>
 
             <q-tab-panels v-model="tab" animated>
@@ -37,6 +38,23 @@
                         <b>Type:</b> {{ profile.type }}
                     </p>                    
                 </q-tab-panel>
+
+                <q-tab-panel name="episodes" class="overflow-hidden d-block">
+                    <q-timeline color="secondary">
+                        <q-timeline-entry v-for="episode in profile.episode" :key="episode.id">
+                            <template v-slot:title>
+                            {{episode.name}}
+                            </template>
+                            <template v-slot:subtitle>
+                            {{episode.air_date}}
+                            </template>
+
+                            <div>
+                            {{ episode.episode }}
+                            </div>
+                        </q-timeline-entry>
+                    </q-timeline>    
+                </q-tab-panel>                
             </q-tab-panels>
         </q-card>    
     </div>
